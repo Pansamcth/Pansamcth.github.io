@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="สารวัตรนักเรียน โรงเรียนเดชะปัตตนยานุกูล - ระบบดูแลความเรียบร้อยและความปลอดภัยของนักเรียน"
+    />
+    <meta
+      name="keywords"
+      content="สารวัตรนักเรียน, student prefect, โรงเรียนเดชะปัตตนยานุกูล, decha"
+    />
+    <title>สารวัตรนักเรียน | โรงเรียนเดชะปัตตนยานุกูล</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+      src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v18.0" 
+      nonce="randomNonce123"></script>
+    
+    <!-- Instagram Embed Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#" class="nav-logo">
+          <i data-lucide="shield-check"></i>
+          <span>สารวัตรนักเรียน</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link">หน้าแรก</a></li>
+          <li><a href="team.html" class="nav-link">ทีมงาน</a></li>
+          <li><a href="#committee" class="nav-link">โครงสร้าง</a></li>
+          <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <i data-lucide="award"></i>
+          <span>Student Prefect Team</span>
+        </div>
+        <h1 class="hero-title">สารวัตรนักเรียน</h1>
+        <p class="hero-subtitle">รักษาระเบียบวินัย สร้างสรรค์สังคมที่ดี</p>
+        <p class="hero-description">
+          ทีมสารวัตรนักเรียนมุ่งมั่นดูแลความเรียบร้อย ความปลอดภัย
+          และส่งเสริมระเบียบวินัยที่ดีให้กับนักเรียนทุกคน
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-primary">
+            <span>เรียนรู้เพิ่มเติม</span>
+            <i data-lucide="arrow-down"></i>
+          </a>
+          <a href="#team" class="btn btn-secondary">
+            <span>พบทีมงาน</span>
+            <i data-lucide="users"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">120</span>
+            <span class="stat-label">สารวัตร</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">วันทำการ</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">ความมุ่งมั่น</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <i data-lucide="chevrons-down"></i>
+      </div>
+    </section>
+
+    <!-- Featured Section with Poster -->
+    <section class="section featured" id="featured">
+      <div class="container">
+        <div class="featured-grid">
+          <!-- Left Sidebar - Important Links -->
+          <div class="featured-sidebar featured-left">
+            <div class="sidebar-header">
+              <i data-lucide="link"></i>
+              <h3>ลิงค์สำคัญ</h3>
+            </div>
+            <ul class="sidebar-links">
+              <li>
+                <a href="https://decha.ac.th" target="_blank">
+                  <i data-lucide="globe"></i>
+                  <span>เว็บไซต์โรงเรียน</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://cutt.ly/databasesarawat" target="_blank">
+                  <i data-lucide="database"></i>
+                  <span>ฐานข้อมูล (เฉพาะ Admin)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://cutt.ly/regissarawat" target="_blank">
+                  <i data-lucide="user-plus"></i>
+                  <span>สมัครสารวัตร</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact">
+                  <i data-lucide="mail"></i>
+                  <span>ติดต่อสารวัตร</span>
+                </a>
+              </li>
+              <li>
+                <a href="#documents">
+                  <i data-lucide="file-text"></i>
+                  <span>เอกสารดาวน์โหลด</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Center - Poster Carousel -->
+          <div class="featured-poster">
+            <div class="poster-slider" id="posterSlider">
+              <div class="poster-slide">
+                <div class="poster-placeholder">
+                  <img src="https://decha.ac.th/tmp/2db8fa8e282c8998b71734d2388bc8ba.png" alt="โปสเตอร์">
+                </div>
+              </div>
+              <!-- Add more poster slides as needed -->
+            </div>
+            <div class="poster-dots" id="posterDots">
+              <button class="poster-dot active" aria-label="Slide 1"></button>
+            </div>
+          </div>
+          
+          <!-- Right Sidebar - Sarawat Team Menu -->
+          <div class="featured-sidebar featured-right">
+            <div class="sidebar-header">
+              <i data-lucide="shield-check"></i>
+              <h3>ทีมสารวัตรนักเรียน</h3>
+            </div>
+            <ul class="sidebar-links">
+              <li>
+                <a href="#chairman">
+                  <i data-lucide="crown"></i>
+                  <span>สารจากประธาน</span>
+                </a>
+              </li>
+              <li>
+                <a href="team.html">
+                  <i data-lucide="users"></i>
+                  <span>สมาชิกทีมงาน</span>
+                </a>
+              </li>
+              <li>
+                <a href="#committee">
+                  <i data-lucide="git-branch"></i>
+                  <span>โครงสร้างองค์กร</span>
+                </a>
+              </li>
+              <li>
+                <a href="#gallery">
+                  <i data-lucide="image"></i>
+                  <span>กิจกรรมและภาพ</span>
+                </a>
+              </li>
+              <li>
+                <a href="#social">
+                  <i data-lucide="share-2"></i>
+                  <span>ข่าวสารและโซเชียล</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">เกี่ยวกับสารวัตรนักเรียน</h2>
+          <p class="section-subtitle">
+            เรียนรู้เกี่ยวกับภารกิจและวิสัยทัศน์ของเรา
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">
+              <i data-lucide="target"></i>
+            </div>
+            <h3>วิสัยทัศน์</h3>
+            <p>
+              เป็นองค์กรนักเรียนที่มีบทบาทสำคัญในการสร้างวินัยและความเป็นระเบียบเรียบร้อยในโรงเรียน
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon">
+              <i data-lucide="compass"></i>
+            </div>
+            <h3>พันธกิจ</h3>
+            <p>
+              ดูแลรักษาความสงบเรียบร้อย ให้คำแนะนำและช่วยเหลือนักเรียน
+              พัฒนาภาวะผู้นำและความรับผิดชอบ
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon">
+              <i data-lucide="heart"></i>
+            </div>
+            <h3>ค่านิยม</h3>
+            <p>ซื่อสัตย์ ยุติธรรม มีน้ำใจ รับผิดชอบ และเป็นแบบอย่างที่ดี</p>
+          </div>
+        </div>
+
+        <div class="about-features">
+          <div class="feature-item">
+            <i data-lucide="check-circle"></i>
+            <span>ดูแลความเรียบร้อยทั่วไป</span>
+          </div>
+          <div class="feature-item">
+            <i data-lucide="check-circle"></i>
+            <span>ตรวจการแต่งกาย</span>
+          </div>
+          <div class="feature-item">
+            <i data-lucide="check-circle"></i>
+            <span>รักษาความปลอดภัย</span>
+          </div>
+          <div class="feature-item">
+            <i data-lucide="check-circle"></i>
+            <span>ให้คำปรึกษาเพื่อน</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chairman Message Section -->
+    <section class="section chairman" id="chairman">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Message</span>
+          <h2 class="section-title">สารจากประธานสารวัตร</h2>
+          <p class="section-subtitle">แนวคิดและวิสัยทัศน์ในการนำทีมสารวัตรนักเรียน</p>
+        </div>
+        
+        <div class="chairman-content">
+          <div class="chairman-image-wrapper">
+            <div class="chairman-image">
+              <div class="chairman-placeholder">
+                <i data-lucide="user"></i>
+              </div>
+              <!-- หรือใส่รูปจริง: <img src="path/to/image.jpg" alt="ประธานสารวัตร"> -->
+            </div>
+            <div class="chairman-badge">
+              <i data-lucide="award"></i>
+              <span>ประธานสารวัตร</span>
+            </div>
+          </div>
+          
+          <div class="chairman-text">
+            <div class="chairman-quote">
+              <i data-lucide="quote" class="quote-icon"></i>
+              <blockquote>
+                "การเป็นสารวัตรนักเรียน ไม่ใช่เพียงแค่การรักษาระเบียบวินัย 
+                แต่คือการสร้างแบบอย่างที่ดี และเป็นผู้นำที่พร้อมรับใช้เพื่อน ๆ ทุกคน 
+                เราจะทำหน้าที่ด้วยความซื่อสัตย์ ยุติธรรม และเป็นกลาง 
+                เพื่อให้โรงเรียนของเราเป็นสถานที่ที่น่าอยู่สำหรับทุกคน"
+              </blockquote>
+            </div>
+            
+            <div class="chairman-info">
+              <div class="chairman-name">
+                <h3>นายสมชาย ใจดี</h3>
+                <span>ประธานสารวัตรนักเรียน ปีการศึกษา 2567</span>
+              </div>
+              <div class="chairman-signature">
+                <span class="signature-text">สมชาย ใจดี</span>
+              </div>
+            </div>
+            
+            <div class="chairman-values">
+              <div class="value-item">
+                <i data-lucide="heart"></i>
+                <span>รับใช้ด้วยใจ</span>
+              </div>
+              <div class="value-item">
+                <i data-lucide="scale"></i>
+                <span>ยุติธรรม</span>
+              </div>
+              <div class="value-item">
+                <i data-lucide="shield-check"></i>
+                <span>ซื่อสัตย์</span>
+              </div>
+              <div class="value-item">
+                <i data-lucide="users"></i>
+                <span>สามัคคี</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Committee Structure Section -->
+    <section class="section committee" id="committee">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Structure</span>
+          <h2 class="section-title">โครงสร้างคณะกรรมการ</h2>
+          <p class="section-subtitle">ลำดับสายการบังคับบัญชาของสารวัตรนักเรียน</p>
+        </div>
+
+        <!-- New Timeline-based Hierarchy -->
+        <div class="hierarchy-timeline">
+          
+          <!-- Commander -->
+          <div class="hierarchy-step">
+            <div class="step-card top-level">
+              <div class="step-icon">
+                <i data-lucide="shield"></i>
+              </div>
+              <div class="step-content">
+                <span class="step-role">ผู้บังคับบัญชาสารวัตร</span>
+                <h4>นายจีรฏะ วิเชียรรัตน์</h4>
+                <p class="step-desc">ครูที่ปรึกษาสารวัตรนักเรียน</p>
+              </div>
+            </div>
+            <div class="step-arrow">
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- Step 4: Chairman -->
+          <div class="hierarchy-step">
+            <div class="step-card leader">
+              <div class="step-icon">
+                <i data-lucide="crown"></i>
+              </div>
+              <div class="step-content">
+                <span class="step-role">ประธานสารวัตรนักเรียน</span>
+                <h4>นายอะห์นัฟ สหสันติวรกุล</h4>
+                <p class="step-desc">หัวหน้าสารวัตรนักเรียน ปีการศึกษา 2567</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Feed Section -->
+    <section class="section social-feed" id="social">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">News & Updates</span>
+          <h2 class="section-title">ข่าวสารและกิจกรรม</h2>
+          <p class="section-subtitle">ติดตามความเคลื่อนไหวล่าสุดจากทีมสารวัตรนักเรียน</p>
+        </div>
+        
+        <div class="social-grid">
+          <!-- Facebook Feed -->
+          <div class="social-card facebook">
+            <div class="social-card-header">
+              <div class="social-icon-wrapper">
+                <i data-lucide="facebook"></i>
+              </div>
+              <div class="social-header-text">
+                <h3>Facebook</h3>
+                <span class="social-handle">@sarawatdechaa</span>
+              </div>
+            </div>
+            <div class="social-card-content" id="fb-feed">
+              <!-- Facebook Page Plugin -->
+              <div class="embed-frame">
+                <div class="fb-page" 
+                  data-href="https://web.facebook.com/sarawatdechaa" 
+                  data-tabs="timeline" 
+                  data-width="" 
+                  data-height="500" 
+                  data-small-header="false" 
+                  data-adapt-container-width="true" 
+                  data-hide-cover="false" 
+                  data-show-facepile="true">
+                  <blockquote cite="https://web.facebook.com/sarawatdechaa" class="fb-xfbml-parse-ignore">
+                    <a href="https://web.facebook.com/sarawatdechaa">กำลังโหลด...</a>
+                  </blockquote>
+                </div>
+              </div>
+              <!-- Placeholder -->
+              <div class="social-placeholder" id="fb-placeholder">
+                <div class="social-placeholder-icon facebook">
+                  <i data-lucide="facebook"></i>
+                </div>
+                <p>Facebook Page</p>
+                <span>ติดตามข่าวสารและกิจกรรมล่าสุดของทีมสารวัตรนักเรียน</span>
+                <a href="https://web.facebook.com/sarawatdechaa" target="_blank" class="btn-connect">
+                  <i data-lucide="external-link"></i>
+                  <span>ไปที่เพจ Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Instagram Feed -->
+          <div class="social-card instagram">
+            <div class="social-card-header">
+              <div class="social-icon-wrapper">
+                <i data-lucide="instagram"></i>
+              </div>
+              <div class="social-header-text">
+                <h3>Instagram</h3>
+                <span class="social-handle">@sarawat_decha</span>
+              </div>
+            </div>
+            <div class="social-card-content" id="ig-feed">
+              <!-- Instagram Embed Posts -->
+              <div class="embed-frame">
+                <div class="ig-posts">
+                  <!-- ใส่ embed code จาก Instagram ที่นี่ -->
+                </div>
+              </div>
+              <!-- Placeholder -->
+              <div class="social-placeholder" id="ig-placeholder">
+                <div class="social-placeholder-icon instagram">
+                  <i data-lucide="instagram"></i>
+                </div>
+                <p>Instagram Feed</p>
+                <span>ชมภาพกิจกรรมและความประทับใจจากทีมสารวัตร</span>
+                <a href="https://www.instagram.com/sarawat_decha" target="_blank" class="btn-connect instagram">
+                  <i data-lucide="external-link"></i>
+                  <span>ไปที่ Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-note">
+          <i data-lucide="info"></i>
+          <p>ติดตามข่าวสารเพิ่มเติมได้ที่ Facebook และ Instagram ของสารวัตรนักเรียน</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="section documents" id="documents">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Downloads</span>
+          <h2 class="section-title">เอกสารดาวน์โหลด</h2>
+          <p class="section-subtitle">เอกสารและแบบฟอร์มต่างๆ สำหรับดาวน์โหลด</p>
+        </div>
+        
+        <div class="documents-grid">
+          <a href="#" class="document-card" download>
+            <div class="document-icon">
+              <i data-lucide="file-text"></i>
+            </div>
+            <div class="document-info">
+              <h4>คู่มือสารวัตรนักเรียน</h4>
+              <span class="document-meta">PDF • 2.5 MB</span>
+            </div>
+            <div class="document-download">
+              <i data-lucide="download"></i>
+            </div>
+          </a>
+          
+          <a href="#" class="document-card" download>
+            <div class="document-icon">
+              <i data-lucide="clipboard-list"></i>
+            </div>
+            <div class="document-info">
+              <h4>แบบฟอร์มสมัครสารวัตร</h4>
+              <span class="document-meta">PDF • 1.2 MB</span>
+            </div>
+            <div class="document-download">
+              <i data-lucide="download"></i>
+            </div>
+          </a>
+          
+          <a href="#" class="document-card" download>
+            <div class="document-icon">
+              <i data-lucide="calendar-days"></i>
+            </div>
+            <div class="document-info">
+              <h4>ตารางเวรประจำเดือน</h4>
+              <span class="document-meta">PDF • 800 KB</span>
+            </div>
+            <div class="document-download">
+              <i data-lucide="download"></i>
+            </div>
+          </a>
+          
+          <a href="#" class="document-card" download>
+            <div class="document-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <div class="document-info">
+              <h4>ระเบียบการปฏิบัติงาน</h4>
+              <span class="document-meta">PDF • 1.8 MB</span>
+            </div>
+            <div class="document-download">
+              <i data-lucide="download"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Slider Section -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Gallery</span>
+          <h2 class="section-title">กิจกรรมและภาพบรรยากาศ</h2>
+          <p class="section-subtitle">รวมภาพกิจกรรมและการปฏิบัติงานของทีมสารวัตร</p>
+        </div>
+        
+        <div class="gallery-slider-wrapper">
+          <button class="gallery-nav gallery-prev" id="galleryPrev" aria-label="Previous">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          
+          <div class="gallery-slider" id="gallerySlider">
+            <div class="gallery-slide">
+              <div class="gallery-placeholder">
+                <i data-lucide="image"></i>
+                <span>พิธีแต่งตั้งสารวัตร</span>
+              </div>
+              <div class="gallery-caption">
+                <h4>พิธีแต่งตั้งสารวัตร</h4>
+                <p>ปีการศึกษา 2567</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <div class="gallery-placeholder">
+                <i data-lucide="image"></i>
+                <span>อบรมสารวัตร</span>
+              </div>
+              <div class="gallery-caption">
+                <h4>อบรมสารวัตร</h4>
+                <p>กิจกรรมพัฒนาศักยภาพ</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <div class="gallery-placeholder">
+                <i data-lucide="image"></i>
+                <span>เข้าแถวหน้าเสาธง</span>
+              </div>
+              <div class="gallery-caption">
+                <h4>เข้าแถวหน้าเสาธง</h4>
+                <p>กิจกรรมยามเช้า</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <div class="gallery-placeholder">
+                <i data-lucide="image"></i>
+                <span>ตรวจระเบียบ</span>
+              </div>
+              <div class="gallery-caption">
+                <h4>ตรวจระเบียบ</h4>
+                <p>การตรวจความเรียบร้อย</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <div class="gallery-placeholder">
+                <i data-lucide="image"></i>
+                <span>กิจกรรมจิตอาสา</span>
+              </div>
+              <div class="gallery-caption">
+                <h4>จิตอาสา</h4>
+                <p>บำเพ็ญประโยชน์</p>
+              </div>
+            </div>
+            
+            <div class="gallery-slide">
+              <div class="gallery-placeholder">
+                <i data-lucide="image"></i>
+                <span>ถ่ายภาพหมู่</span>
+              </div>
+              <div class="gallery-caption">
+                <h4>ภาพหมู่สารวัตร</h4>
+                <p>ปีการศึกษา 2567</p>
+              </div>
+            </div>
+          </div>
+          
+          <button class="gallery-nav gallery-next" id="galleryNext" aria-label="Next">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+        
+        <div class="gallery-dots" id="galleryDots"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">ติดต่อเรา</h2>
+          <p class="section-subtitle">สามารถติดต่อทีมสารวัตรนักเรียนได้ที่</p>
+        </div>
+
+        <div class="contact-grid">
+          <a href="https://maps.app.goo.gl/u577mrJoGC39Nw7m6" target="_blank" class="contact-card">
+            <div class="contact-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <h4>สถานที่</h4>
+            <p>โรงเรียนเดชะปัตตนยานุกูล<br/>จ.ปัตตานี</p>
+          </a>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i data-lucide="clock"></i>
+            </div>
+            <h4>เวลาทำการ</h4>
+            <p>จันทร์ - ศุกร์<br/>06:50 - 16:00 น.</p>
+          </div>
+
+          <a href="mailto:sarawat.decha@gmail.com" class="contact-card">
+            <div class="contact-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <h4>อีเมล</h4>
+            <p>sarawat.decha@gmail.com</p>
+          </a>
+        </div>
+
+        <div class="contact-social">
+          <p>ติดตามข่าวสาร</p>
+          <div class="social-links">
+            <a href="https://web.facebook.com/sarawatdechaa" target="_blank" class="social-link" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sarawat_decha/" target="_blank" class="social-link" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@sarawat.decha" target="_blank" class="social-link" aria-label="TikTok">
+              <i data-lucide="music"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="assets/icons/sarawat-logo.png" alt="สารวัตรนักเรียน" class="footer-sarawat-logo">
+          </div>
+          <p class="footer-text">โรงเรียนเดชะปัตตนยานุกูล | รักษาระเบียบวินัย สร้างสรรค์สังคมที่ดี</p>
+          <div class="footer-powered">
+            <span>Powered By</span>
+            <p>© 2025 Sarawat Portfolio by <a href="https://web.facebook.com/pansamcth" target="_blank">Rujira Wattanakitpaisal</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i data-lucide="chevron-up"></i>
+    </button>
+
+    <!-- Black Ribbon (ริบบิ้นไว้อาลัย) -->
+    <img src="https://nuuneoi.com/blog/884/black_ribbon_bottom_left.png" 
+         alt="ริบบิ้นไว้อาลัย" 
+         class="black-ribbon stick-bottom stick-left"/>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
