@@ -189,7 +189,8 @@
 }
 ```
 
-> [!WARNING] > `backdrop-filter` ไม่รองรับใน Internet Explorer และ browser เก่า
+> [!WARNING]
+> `backdrop-filter` ไม่รองรับใน Internet Explorer และ browser เก่า
 
 ---
 
