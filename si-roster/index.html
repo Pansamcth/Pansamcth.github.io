@@ -53,9 +53,25 @@
 <body>
 
     <iframe
-        src="https://script.google.com/macros/s/AKfycbyYRx-hwtiMdVgza-c3AtF9r6QVabwm_FV0W8c97ucU6kOltkVZEQ-v1YivE1Zw90xg6g/exec"
+        id="gasFrame"
+        src="https://script.google.com/macros/s/AKfycbxh0FLxuGH7uNPb_JrvqLOaLcUG2SVDwhKyt-uZQSEzIkMvpBtACgNNcMyzzTyxPVdUxA/exec"
         loading="eager" referrerpolicy="strict-origin-when-cross-origin">
     </iframe>
+
+    <script>
+        // ดึงค่า URL Parameter (เช่น ?id=ACT_123 หรือ ?page=admin) จากหน้าเว็บ GitHub Pages
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryString = urlParams.toString();
+        
+        if (queryString) {
+            const iframe = document.getElementById('gasFrame');
+            if (iframe) {
+                const originalSrc = iframe.src;
+                // นำ Parameter ไปต่อท้ายลิงก์ iframe ของ GAS
+                iframe.src = originalSrc + (originalSrc.includes('?') ? '&' : '?') + queryString;
+            }
+        }
+    </script>
 
 </body>
 
