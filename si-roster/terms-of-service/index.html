@@ -41,8 +41,38 @@
             overflow: hidden;
         }
 
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
     </style>
+</head>
+
 <body>
-    <iframe src=”https://silky-indigo-806.notion.site/ebd//3ef9dc23fd1c80868f53e615b9179072“ width=”100%“ height=”600“ frameborder=”0“ allowfullscreen />
+
+    <iframe
+        id="gasFrame"
+        src="https://silky-indigo-806.notion.site/ebd//3ef9dc23fd1c80868f53e615b9179072"
+        loading="eager" referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+
+    <script>
+        // ดึงค่า URL Parameter (เช่น ?id=ACT_123 หรือ ?page=admin) จากหน้าเว็บ GitHub Pages
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryString = urlParams.toString();
+        
+        if (queryString) {
+            const iframe = document.getElementById('gasFrame');
+            if (iframe) {
+                const originalSrc = iframe.src;
+                // นำ Parameter ไปต่อท้ายลิงก์ iframe ของ GAS
+                iframe.src = originalSrc + (originalSrc.includes('?') ? '&' : '?') + queryString;
+            }
+        }
+    </script>
+
 </body>
+
 </html>
