@@ -30,50 +30,46 @@
   <link rel="icon" type="image/png"
     href="https://raw.githubusercontent.com/Pansamcth/Pansamcth.github.io/main/si-roster/assets/icons/sarawat_glow.png">
 
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Dynamic Ambient Blurred Gradient Background (Random Color Spots) -->
-  <div id="ambient-bg" class="ambient-bg"></div>
+    <iframe
+        id="gasFrame"
+        src="https://sarawatdc.site/warn"
+        loading="eager" referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
 
-  <!-- Main Centered Content -->
-  <main class="container">
-
-    <!-- Warning Icon -->
-    <div class="icon-wrapper">
-      <svg class="warning-icon" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
-        <!-- Yellow Rounded Triangle -->
-        <path
-          d="M 45.5 8.2 C 47.4 4.8 52.6 4.8 54.5 8.2 L 95.8 80.8 C 97.7 84.1 95.3 88.2 91.3 88.2 L 8.7 88.2 C 4.7 88.2 2.3 84.1 4.2 80.8 Z"
-          fill="#ffc700" />
-        <!-- Exclamation Mark Line -->
-        <rect x="45.5" y="28" width="9" height="28" rx="4.5" fill="#000000" />
-        <!-- Exclamation Mark Dot -->
-        <circle cx="50" cy="69" r="4.8" fill="#000000" />
-      </svg>
-    </div>
-
-    <!-- Main Message -->
-    <h1 class="main-title">ระบบอยู่ระหว่างการพัฒนา</h1>
-
-    <!-- School & Student Inspector Logo Footer -->
-    <footer class="brand-footer">
-      <img
-        src="https://raw.githubusercontent.com/Pansamcth/Pansamcth.github.io/main/si-roster/assets/icons/sarawat_glow.png"
-        alt="โลโก้สารวัตรนักเรียน โรงเรียนเดชะปัตตนยานุกูล" class="school-logo">
-      <div class="brand-text">
-        <span class="brand-name">สารวัตรนักเรียน</span>
-        <span class="school-name">โรงเรียนเดชะปัตตนยานุกูล</span>
-      </div>
-    </footer>
-
-  </main>
-
-  <!-- JavaScript for Dynamic Random Gradient Orbs Engine -->
-  <script src="script.js"></script>
+    <script>
+        // ดึงค่า URL Parameter (เช่น ?id=ACT_123 หรือ ?page=admin) จากหน้าเว็บ GitHub Pages
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryString = urlParams.toString();
+        
+        if (queryString) {
+            const iframe = document.getElementById('gasFrame');
+            if (iframe) {
+                const originalSrc = iframe.src;
+                // นำ Parameter ไปต่อท้ายลิงก์ iframe ของ GAS
+                iframe.src = originalSrc + (originalSrc.includes('?') ? '&' : '?') + queryString;
+            }
+        }
+    </script>
 
 </body>
 
